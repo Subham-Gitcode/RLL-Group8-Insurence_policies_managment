@@ -1,0 +1,69 @@
+Table: Admin
++-----+----------+----------+
+| aid | username | password |
++-----+----------+----------+
+| INT |VARCHAR |VARCHAR   |
++-----+----------+----------+
+
+Table: Approvals
++----------+---------+---------+------------+--------+
+| userName | policyId| requestId| date    | status |
++----------+---------+---------+------------+--------+
+| VARCHAR  | INT     | INT     | DATE     | VARCHAR|
++----------+---------+---------+------------+--------+
+
+Table: Approved
++----------+---------+---------+------------+--------+
+| userName | policyId| requestId| date   | status |
++----------+---------+---------+------------+--------+
+| VARCHAR  | INT     | INT     | DATE   | VARCHAR|
++----------+---------+---------+------------+--------+
+
+Table: AuthenticationStatus
++----------+----------+--------------+
+| userName | password | authenticated|
++----------+----------+--------------+
+| VARCHAR  | VARCHAR  | BOOLEAN|
++----------+----------+--------------+
+
+Table: Category
++----------+
+| category |
++----------+
+| VARCHAR  |
++----------+
+
+Table: Disapproved
++----------+---------+---------+------------+--------+
+| userName | policyId| requestId| date       | status |
++----------+---------+---------+------------+--------+
+| VARCHAR  | INT     | INT     | DATE   | VARCHAR|
++----------+---------+---------+------------+--------+
+
+Table: Login
++----------+----------+
+| userName | password |
++----------+----------+
+| VARCHAR  | VARCHAR  |
++----------+----------+
+
+Table: Policies
++---------+-------------+----------+-------+---------------+
+| policyId| policyName  | category | amount| tenureInYears |
++---------+-------------+----------+-------+---------------+
+| INT     | VARCHAR     | VARCHAR  | DOUBLE| INT   |
++---------+-------------+----------+-------+---------------+
+
+Table: Queries
++----------+---------+---------+---------+
+| userName | queryId | question| answer  |
++----------+---------+---------+---------+
+| VARCHAR  | INT     | VARCHAR | VARCHAR |
++----------+---------+---------+---------+
+
+Table: User
++-------+----------+-------+--------+----------+
+| userid| userName | email | mobile | password |
++-------+----------+-------+--------+----------+
+| INT   |VARCHAR   |VARCHAR| VARCHAR| VARCHAR  |
++-------+----------+-------+--------+----------+
